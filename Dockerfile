@@ -7,7 +7,7 @@ RUN apk add --update wget unzip && \
     unzip AriaNg.zip && \
     rm -f AriaNg.zip
 
-FROM nginx
+FROM nginx:stable-alpine
 LABEL maintainer="hly0928 <i@hly0928.com>"
 COPY --from=builder /aria/ /usr/share/nginx/html/
 EXPOSE 80
