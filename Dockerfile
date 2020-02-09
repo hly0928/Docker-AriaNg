@@ -1,9 +1,9 @@
 FROM alpine AS builder
-ARG ariang_version=1.1.4
+ARG ARIANG_VERSION=1.1.4
 RUN apk add --update wget unzip && \
     mkdir /aria && \
     cd /aria && \
-    wget -q -O AriaNg.zip https://github.com/mayswind/AriaNg/releases/download/${ariang_version}/AriaNg-${ariang_version}.zip && \
+    wget -q -O AriaNg.zip https://github.com/mayswind/AriaNg/releases/download/${ARIANG_VERSION}/AriaNg-${ARIANG_VERSION}.zip && \
     unzip AriaNg.zip && \
     rm -f AriaNg.zip
 
