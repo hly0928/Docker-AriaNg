@@ -1,5 +1,5 @@
 FROM alpine AS builder
-ARG ARIANG_VERSION=1.1.5
+ARG ARIANG_VERSION=1.1.6
 RUN apk add --update wget unzip && \
     mkdir /aria && \
     cd /aria && \
